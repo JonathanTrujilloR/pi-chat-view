@@ -1,0 +1,31 @@
+pi-chat-view
+
+This project ports logic from Collie (https://github.com/AltanS/collie):
+tool-call classification (bridge/journal/tool-call.ts), the Pi session mapping
+(bridge/journal/pi.ts), chat items (web/src/lib/chat-items.ts), and run folding,
+summaries and step lines (web/src/components/chat-cards.tsx, i18n en.ts).
+Ported code lives under src/model/ and is marked in its file headers.
+
+Collie is distributed under the MIT License:
+
+MIT License
+
+Copyright (c) 2026 Altan Sarisin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
