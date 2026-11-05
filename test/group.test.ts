@@ -85,3 +85,13 @@ test("shortPath folds a home directory to ~", () => {
   assert.equal(shortPath("/var/home/jk/a"), "~/a");
   assert.equal(shortPath("src/a.ts"), "src/a.ts");
 });
+
+test("shortPath: home folders on macOS and Windows become ~ too", () => {
+  assert.equal(shortPath("/Users/ana/Code/a.ts"), "~/Code/a.ts");
+  assert.equal(shortPath("C:\\Users\\ana\\Code\\a.ts"), "~\\Code\\a.ts");
+  assert.equal(shortPath("c:/Users/ana/Code/a.ts"), "~/Code/a.ts");
+  assert.equal(shortPath("/home/ana/x"), "~/x");
+  // Not a home folder: unchanged.
+  assert.equal(shortPath("/opt/Users/ana/a.ts"), "/opt/Users/ana/a.ts");
+  assert.equal(shortPath("D:\\Projects\\a.ts"), "D:\\Projects\\a.ts");
+});

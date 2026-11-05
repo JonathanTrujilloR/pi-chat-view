@@ -129,7 +129,7 @@ export function stepLine(call: ChatToolCall): StepLine {
   }
 }
 
-/** A home directory folded to `~`. */
+/** A home directory folded to `~`: Linux (`/home/x`, `/var/home/x`), macOS (`/Users/x`), Windows (`C:\Users\x`). */
 export function shortPath(p: string): string {
-  return p.replace(/^\/var\/home\/[^/]+/, "~").replace(/^\/home\/[^/]+/, "~");
+  return p.replace(/^(?:\/var\/home|\/home|\/Users)\/[^/]+/, "~").replace(/^[A-Za-z]:([\\/])Users\1[^\\/]+/, "~");
 }
