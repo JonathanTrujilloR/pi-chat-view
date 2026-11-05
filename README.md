@@ -76,6 +76,10 @@ pi -e git:github.com/JonathanTrujilloR/pi-chat-view
 You keep typing in Pi's normal input box while the chat is open: it never takes the keyboard, and it never covers
 the input box, its widgets or the footer. While Chat is closed every key is Pi's as usual.
 
+**On macOS**, if `alt+c` types `ç` instead of opening the chat, your terminal sends Option as a character. Turn on
+"Use Option as Meta key" (Terminal.app: Settings → Profiles → Keyboard; iTerm2: Profiles → Keys → Left Option key →
+Esc+; Ghostty: `macos-option-as-alt = true`), or just type `/chat`.
+
 ## What you see
 
 - **Your messages** in a tinted box with a coloured `▎` bar; scrolled past one, it stays pinned at the top as a dim
