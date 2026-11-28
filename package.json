@@ -1,0 +1,45 @@
+{
+  "name": "pi-chat-view",
+  "version": "0.1.0",
+  "description": "A chat view for Pi: toggle Chat ⇄ Terminal with alt+c. Fits Gentle Shell too.",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "gentle-shell",
+    "chat",
+    "tui"
+  ],
+  "author": "Jonathan Trujillo (https://github.com/JonathanTrujilloR)",
+  "license": "MIT",
+  "homepage": "https://github.com/JonathanTrujilloR/pi-chat-view#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanTrujilloR/pi-chat-view.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JonathanTrujilloR/pi-chat-view/issues"
+  },
+  "type": "module",
+  "files": [
+    "index.ts",
+    "src/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/",
+    "bench": "node bench/chat.bench.ts"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "image": "https://raw.githubusercontent.com/JonathanTrujilloR/pi-chat-view/main/docs/chat.png"
+  }
+}
